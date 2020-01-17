@@ -1,0 +1,4 @@
+spotify:
+  clientId: SECRET
+  clientSecret: SECRET
+  redirectUrl: http://foobar

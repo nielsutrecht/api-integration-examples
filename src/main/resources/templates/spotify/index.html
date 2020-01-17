@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:include="fragments/header :: header"></div>
+<body>
+<div class="container">
+    <a th:href="@{https://accounts.spotify.com/authorize?client_id={clientId}&response_type=code&redirect_uri={redirectUrl}&state={state}&scope={scopes}(clientId=${clientId},redirectUrl=${redirectUrl},state=${state},scopes=${scopes})}">
+        <span>Spotify Login</span></a></span>
+</div>
+</body>
+</html>

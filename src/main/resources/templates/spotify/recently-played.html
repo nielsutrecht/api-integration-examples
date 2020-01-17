@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:include="fragments/header :: header"></div>
+<body>
+<div class="container">
+    <h1>Recently played</h1>
+    <div><b>Rules:</b></label>
+        <table>
+            <tr th:each="item: ${recent}" class="recent-item">
+                <td th:text="${item.track.name}"></td>
+                <td th:text="${item.track.artists[0].name}"></td>
+                <td th:text="${#temporals.format(item.playedAt, 'dd-MM-yyyy HH:mm')}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
